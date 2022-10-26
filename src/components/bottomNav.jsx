@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function BottomNav() {
   return (
-    <div className="btm-nav w-80 mx-auto bottom-5 rounded-full bg-main">
+    <div className="btm-nav w-80 h-12 mx-auto bottom-3 rounded-full bg-main">
       <Link to="/">
         <button className="rounded-full">
           <svg
@@ -61,7 +61,7 @@ export default function BottomNav() {
         </button>
       </Link>
 
-      <Link to="/profile">
+      {/* <Link to="/profile">
         <button className="rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ export default function BottomNav() {
             />
           </svg>
         </button>
-      </Link>
+      </Link> */}
     </div>
   );
 }
