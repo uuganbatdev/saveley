@@ -16,7 +16,7 @@ export default function Rewards() {
             />
           </div>
           <div className="p-6">
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-700 text-gray-400">
               {reward.text}
             </p>
             <div className="flex items-center justify-between">
