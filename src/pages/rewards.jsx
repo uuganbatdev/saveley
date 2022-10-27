@@ -6,7 +6,7 @@ export default function Rewards() {
       {rewards.map((reward, index) => (
         <div
           key={index}
-          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-700 dark:border-gray-700"
+          class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md bg-gray-700 border-gray-700"
         >
           <div>
             <img
