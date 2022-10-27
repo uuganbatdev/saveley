@@ -12,8 +12,8 @@ export default function Leaderboard() {
               <div className="text-sm">{user.date}</div>
             </div>
           </div>
-          <div className="text-main leading-4 text-sm text-center flex flex-col justify-center ml-3 mr-5">
-            <div>{user.value}</div>
+          <div className="text-main leading-4 text-sm text-center flex flex-col justify-center w-24">
+            <div className="text-lg">{user.value}</div>
             <div>литр ус</div>
           </div>
         </div>
