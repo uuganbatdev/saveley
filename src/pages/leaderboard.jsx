@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Leaderboard() {
   return (
-    <div className="text-white text-center space-y-5 font-medium">
+    <div className="text-white text-center space-y-5 mt-5 font-medium">
       {users.map((user, index) => (
         <div key={index} className="w-full shadow-md h-16 rounded-full bg-white flex justify-between">
           <div className="font-medium space-x-4 text-medium text-base rounded-full text-white bg-white text-main border border-gray-500 px-5 flex-1 flex items-center">

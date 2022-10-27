@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Rewards() {
   return (
-    <div className="flex flex-col space-y-5">
+    <div className="flex flex-col space-y-5 mt-5">
       {rewards.map((reward, index) => (
         <div
           key={index}
