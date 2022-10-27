@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function BottomNav() {
   return (
-    <div className="btm-nav w-80 z-30 h-12 mx-auto bottom-3 rounded-full bg-main/90">
+    <div className="btm-nav w-80 z-30 h-12 mx-auto bottom-3 rounded-full bg-main">
       <Link to="/">
         <button className="rounded-full">
           <svg
