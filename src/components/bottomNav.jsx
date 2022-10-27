@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 
 export default function BottomNav() {
+    const location = useLocation();
+    const pathname = location.pathname;
   return (
     <div className="btm-nav w-80 z-30 h-12 mx-auto bottom-3 rounded-full bg-main">
       <Link to="/">
-        <button className="rounded-full">
+        <button className={`rounded-full w-full h-full ${pathname === '/' ? "bg-black/10": ""}  flex justify-center items-center`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -24,7 +27,7 @@ export default function BottomNav() {
       </Link>
 
       <Link to="/rewards">
-        <button className="rounded-full">
+        <button className={`rounded-full w-full h-full ${pathname === '/rewards' ? "bg-black/10": ""}  flex justify-center items-center`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -43,7 +46,7 @@ export default function BottomNav() {
       </Link>
 
       <Link to="/leaderboard">
-        <button className="rounded-full">
+        <button className={`rounded-full w-full h-full ${pathname === '/leaderboard' ? "bg-black/10": ""}  flex justify-center items-center`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
