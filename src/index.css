@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ytube iframe {
+  border-radius: 14px;
+}

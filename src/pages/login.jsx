@@ -2,6 +2,7 @@ import { toast } from "react-toastify";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { AppContext } from "../App";
+import Cookies from 'js-cookie'
 
 export default function Login() {
 
@@ -46,13 +47,14 @@ export default function Login() {
         autoClose: 3000,
         isLoading: false,
       });
+      Cookies.set('email', email, { expires: 7 })
       setAppState(prev => ({...prev, email, isLoggedIn: true}));
     } else {
       toast.update(id, {
         render: "Таарахгүй байна.",
         type: "error",
         autoClose: 3000,
-        isLoading: false,
+        isLoading: false
       });
     }
   }
