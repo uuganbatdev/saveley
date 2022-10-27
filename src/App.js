@@ -5,8 +5,12 @@ import Home from "./pages/home";
 import Rewards from "./pages/rewards";
 import Leaderboard from "./pages/leaderboard";
 import Profile from "./pages/profile";
-import { useState } from "react";
+import { useState, createContext, useContext } from "react";
 import Login from "./pages/login";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+export const AppContext = createContext(null);
 
 const router = createBrowserRouter([
   {
@@ -52,13 +56,22 @@ const loginRouter = createBrowserRouter([
 ]);
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const [appState, setAppState] = useState({isLoggedIn: false, email: null});
   return (
-    <div>
-      <RouterProvider router={isLoggedIn ? router : loginRouter} />
-    </div>
+    <AppContext.Provider value={{appState,setAppState}}>
+      <InnerApp />
+    </AppContext.Provider>
   );
+}
+
+function InnerApp () {
+  const {isLoggedIn} = useContext(AppContext).appState;
+  return (
+    <>
+      <ToastContainer />
+      <RouterProvider router={isLoggedIn ? router : loginRouter} />
+    </>
+  )
 }
 
 export default App;
